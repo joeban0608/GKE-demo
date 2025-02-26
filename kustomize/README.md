@@ -1,0 +1,1 @@
+kubectl kustomize ./kustomize > ./kustomize/output.yaml
