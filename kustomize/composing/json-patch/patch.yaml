@@ -1,0 +1,4 @@
+# Create a json patch
+- op: replace
+  path: /spec/replicas
+  value: 3
