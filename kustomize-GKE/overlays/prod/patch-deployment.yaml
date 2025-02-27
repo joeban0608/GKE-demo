@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svelte-app
+spec:
+  replicas: 2 # 正式環境設定 2 個 replicas
+  template:
+    spec:
+      containers:
+        - name: svelte-app
+          image: asia-east1-docker.pkg.dev/seo-manager-429705/test-joe-svelte-app/svelte-app:prod # 使用 prod 版本的 Image

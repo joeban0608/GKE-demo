@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svelte-app
+  labels:
+    app: svelte-app
+spec:
+  replicas: 1 # 預設 1 個 Pod，dev/prod 會覆蓋它
+  selector:
+    matchLabels:
+      app: svelte-app
+  template:
+    metadata:
+      labels:
+        app: svelte-app
+    spec:
+      containers:
+        - name: svelte-app
+          image: asia-east1-docker.pkg.dev/seo-manager-429705/test-joe-svelte-app/svelte-app:latest
+          ports:
+            - containerPort: 3000
