@@ -1,0 +1,11 @@
+configMapGenerator:
+  - name: example-configmap-3
+    literals:
+      - FOO=Bar
+generatorOptions:
+  # 預設 false
+  # disableNameSuffixHash: false
+  labels:
+    type: generated
+  annotations:
+    note: generated
