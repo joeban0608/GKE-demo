@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  BAZ: Qux
+  FOO: Bar
+kind: ConfigMap
+metadata:
+  name: example-configmap-2-892ghb99c8

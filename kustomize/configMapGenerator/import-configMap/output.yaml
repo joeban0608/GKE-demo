@@ -1,0 +1,35 @@
+apiVersion: v1
+data:
+  application.properties: |+
+    FOO=Bar
+    FOO2=Bar2
+
+kind: ConfigMap
+metadata:
+  name: example-configmap-1-t7gdhc44c9
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-app
+  name: my-app
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - image: my-app
+        name: app
+        volumeMounts:
+        - mountPath: /config
+          name: config
+      volumes:
+      - configMap:
+          name: example-configmap-1-t7gdhc44c9
+        name: config

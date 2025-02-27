@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  application.properties: |+
+    FOO=Bar
+    FOO2=Bar2
+
+kind: ConfigMap
+metadata:
+  name: example-configmap-1-t7gdhc44c9
