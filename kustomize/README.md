@@ -1,1 +1,1 @@
-kubectl kustomize ./kustomize > ./kustomize/output.yaml
+kustomize build > ./output.yaml
